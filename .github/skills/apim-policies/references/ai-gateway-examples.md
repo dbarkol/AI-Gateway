@@ -125,10 +125,7 @@ Handle 429 (rate limit) and 503 (service unavailable) errors with automatic retr
     <backend>
         <!--Set count to one less than the number of backends in the pool-->
         <retry count="2" interval="0" first-fast-retry="true" 
-            condition="@(context.Response.StatusCode == 429 || 
-                        (context.Response.StatusCode == 503 && 
-                         !context.Response.StatusReason.Contains("Backend pool") && 
-                         !context.Response.StatusReason.Contains("is temporarily unavailable")))">
+            condition="@(context.Response.StatusCode == 429 || context.Response.StatusCode == 503)">
             <!--Switch back to same backend pool which will have automatically removed the faulty backend -->
             <set-backend-service backend-id="{backend-id}" />
             <forward-request buffer-request-body="true" />
@@ -443,10 +440,7 @@ Combines multiple patterns for production deployments:
     <backend>
         <!--Policy 1 - Apply load-balancing and retry mechanisms -->
         <retry count="{retry-count}" interval="0" first-fast-retry="true" 
-            condition="@(context.Response.StatusCode == 429 || 
-                        (context.Response.StatusCode == 503 && 
-                         !context.Response.StatusReason.Contains("Backend pool") && 
-                         !context.Response.StatusReason.Contains("is temporarily unavailable")))">
+            condition="@(context.Response.StatusCode == 429 || context.Response.StatusCode == 503)">
             <forward-request buffer-request-body="true" />
         </retry>
     </backend>
