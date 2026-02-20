@@ -67,7 +67,7 @@ Build and control agentic applications with orchestration frameworks.
 
 | Lab | Description |
 |-----|-------------|
-| [**AI Agent Service**](labs/ai-agent-service/ai-agent-service.ipynb) | Explore Foundry Agent Service with multi-service control |
+| [**AI Agent Service**](labs/ai-agent-service/ai-agent-service-v2.ipynb) | Explore Foundry Agent Service with multi-service control |
 | [**OpenAI Agents SDK**](labs/openai-agents/openai-agents.ipynb) | Use OpenAI Agents with Azure OpenAI and APIM-managed tools |
 | [**Gemini MCP Agents**](labs/gemini-mcp-agents/gemini-mcp-agents.ipynb) | Integrate Google Gemini models with MCP tools |
 | [**A2A Enabled Agents**](labs/mcp-a2a-agents/mcp-agent-as-a2a-server.ipynb) | A2A-enabled Agents with models and MCP plug & play tools |
@@ -78,7 +78,7 @@ Build and control agentic applications with orchestration frameworks.
 
 - [Python 3.12+](https://www.python.org/)
 Python environment with the requirements.txt or run pip install -r requirements.txt in your terminal
-- [Python environment](https://code.visualstudio.com/docs/python/environments#_creating-environments) with the [requirements.txt](../../requirements.txt) or run `pip install -r requirements.txt` in your terminal
+- [Python environment](https://code.visualstudio.com/docs/python/environments#_creating-environments) with the [requirements.txt](requirements.txt) or run `pip install -r requirements.txt` in your terminal
 - [VS Code](https://code.visualstudio.com/) with [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
 - [Azure Subscription](https://azure.microsoft.com/free/) with Contributor + RBAC Administrator roles
 - [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli) authenticated to your subscription

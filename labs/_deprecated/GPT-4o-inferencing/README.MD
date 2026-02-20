@@ -2,7 +2,7 @@
 
 ## [GPT-4o inferencing lab](GPT-4o-inferencing.ipynb)
 
-[![flow](../../images/GPT-4o-inferencing.gif)](GPT-4o-inferencing.ipynb)
+[![flow](../../../images/GPT-4o-inferencing.gif)](GPT-4o-inferencing.ipynb)
 
 Playground to try the new GPT-4o model. GPT-4o ("o" for "omni") is designed to handle a combination of text, audio, and video inputs, and can generate outputs in text, audio, and image formats.
 

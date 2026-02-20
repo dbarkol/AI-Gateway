@@ -2,7 +2,7 @@
 
 ## [Content filtering lab](content-filtering.ipynb)
 
-[![flow](../../images/content-filtering.gif)](content-filtering.ipynb)
+[![flow](../../../images/content-filtering.gif)](content-filtering.ipynb)
 
 - Playground to try text moderation and prompt shields from [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/overview). Content filtering software can help your app comply with regulations or maintain the intended environment for your users.
 

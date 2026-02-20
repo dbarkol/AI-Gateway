@@ -2,7 +2,7 @@
 
 ## Prompt flow lab
 
-![flow](../../images/prompt-flow.gif)
+![flow](../../../images/prompt-flow.gif)
 
 Playground to try the [Azure AI Studio Prompt Flow](https://learn.microsoft.com/azure/ai-studio/how-to/prompt-flow) with Azure API Management. The Prompt Flow OpenAI connection will be facilitated by APIM, enabling load balancing, token counting, and other features. The Prompt Flow will run in an Azure Container App and will be accessed through APIM.
 

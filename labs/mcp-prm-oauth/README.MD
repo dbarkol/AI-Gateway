@@ -24,7 +24,7 @@ Playground to experiment the [Model Context Protocol](https://modelcontextprotoc
 
 In this flow, Azure API Management act both as an OAuth client connecting to the [Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/architecture/auth-oauth2) authorization server and as an OAuth authorization server for the MCP client ([MCP inspector](https://modelcontextprotocol.io/docs/tools/inspector) in this lab), VS Code or Copilot Studio.
 
-Full documentation of the assets created in this lab and how they interact is documented in [Arch decisions summary](ARCH_SUMMARY.md) and in [MCP PRM Server implementation](src/mcp-prm-server/README.md)
+Full documentation of the assets created in this lab and how they interact is documented in [Arch decisions summary](ARCH_SUMMARY.md) and in [MCP PRM Server implementation](../../shared/mcp-servers/prm-graphapi/README.md)
 
 
 ⚠️ This lab implements the [MCP Authorization proposal](https://modelcontextprotocol.io/specification/2025-03-26/basic/authorization) and [RFC9729](https://datatracker.ietf.org/doc/html/rfc9728), this is as close to production-grade security for MCP servers as it gets, and is inspired by the amazing work by [blackchoey/remote-mcp-apim-oauth-prm](https://github.com/blackchoey/remote-mcp-apim-oauth-prm) - originally written in C#
@@ -40,7 +40,7 @@ Full documentation of the assets created in this lab and how they interact is do
 
 ### 🚀 Get started
 
-Proceed by opening the [Jupyter notebook](mcp-client-authorization.ipynb), and follow the steps provided.
+Proceed by opening the [Jupyter notebook](mcp-prm-oauth.ipynb), and follow the steps provided.
 
 ### 🗑️ Clean up resources
 

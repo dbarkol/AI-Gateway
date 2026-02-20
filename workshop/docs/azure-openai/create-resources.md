@@ -16,21 +16,21 @@ Let's create an Azure Open AI cloud resource.
 
 - Search for **Azure Open AI** and select "Create" button.
 
-  ![Create Azure Open AI](/img/token-limit-1.png)
+  ![Create Azure Open AI](../../static/img/token-limit-1.png)
  
 - Fill out all the values and create the resource.
 
-  ![Fill out Azure Open AI information](/img/token-limit-2.png)
+  ![Fill out Azure Open AI information](../../static/img/token-limit-2.png)
  
 ### -2- Create a deployment on your Azure Open AI instance
 
 - Navigate to your deployed Azure Open AI instance and select "Go to Azure AI Foundry Portal". 
 
-  ![Go to Azure AI Foundry](/img/token-limit-3.png)
+  ![Go to Azure AI Foundry](../../static/img/token-limit-3.png)
 
   You should now see a user interfance like so:
 
-  ![Azure AI Foundry](/img/token-limit-4.png)
+  ![Azure AI Foundry](../../static/img/token-limit-4.png)
 
 - Select "Deployments" in the left menu and select "+ Deploy model" and select "base model"
 - Type **gpt-4o**, select the model from the list and click "Confirm".
@@ -42,7 +42,7 @@ Let's create an Azure Open AI cloud resource.
 - In Azure Portal, type **Azure API Management services**. 
 - Select "+ Create" and fill in the needed information to create a new Azure API Management instance.
 
-  ![Create Azure API Management resource](/img/token-limit-5.png)
+  ![Create Azure API Management resource](../../static/img/token-limit-5.png)
 
 
   Great, now that we Azure Open AI deployments and Azure API Management created, we can move on to the next activity which is to load balance between Azure Open AI instances.

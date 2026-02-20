@@ -40,15 +40,15 @@ Make sure you have completed the lesson on [setting up cloud resources](./create
 
 - Navigate to your newly created Azure API Management instance and select "API" in the menu like indicated in the image:
 
-  ![Import Azure Open AI to Azure API Management](/img/token-limit-6.png) 
+  ![Import Azure Open AI to Azure API Management](../../static/img/token-limit-6.png) 
 
 - Select your subscription and provide a name of your choosing.
 
-  ![Fill in API details](/img/token-limit-7.png)
+  ![Fill in API details](../../static/img/token-limit-7.png)
 
 - On the next tab, fill in that you want to "Manage token consumption"
 
-  ![Manage token consumption](/img/token-limit-8.png)
+  ![Manage token consumption](../../static/img/token-limit-8.png)
 
   Great, now it's time to configure the remaining parts, almost there!
 
@@ -106,7 +106,7 @@ Now that we have everything setup, let's try see how we can configure the policy
 
 let's make a few requests, remember, we expect a 429 error to happen once we exhaust our allowed "tokens-per-minute value"
 
-![rate limited](/img/rate-limited.png)
+![rate limited](../../static/img/rate-limited.png)
 
 If you see the above image, that means the policy is working
 

@@ -40,7 +40,7 @@ The simplest policy that routes to a backend:
 </policies>
 ```
 
-**Source:** [labs/built-in-logging/policy.xml](../../../labs/built-in-logging/policy.xml)
+**Source:** [labs/built-in-logging/policy.xml](../../../../labs/built-in-logging/policy.xml)
 
 ---
 
@@ -73,7 +73,7 @@ Authenticate to Azure OpenAI or Azure AI Services using APIM's managed identity:
 </policies>
 ```
 
-**Source:** [labs/function-calling/policy.xml](../../../labs/function-calling/policy.xml)
+**Source:** [labs/function-calling/policy.xml](../../../../labs/function-calling/policy.xml)
 
 **Use case:** When APIM needs to call Azure OpenAI/AI Services on behalf of clients without passing through client credentials.
 
@@ -104,7 +104,7 @@ Validate client tokens before forwarding requests:
 </policies>
 ```
 
-**Source:** [labs/access-controlling/policy.xml](../../../labs/access-controlling/policy.xml)
+**Source:** [labs/access-controlling/policy.xml](../../../../labs/access-controlling/policy.xml)
 
 **Use case:** Restrict API access to specific Azure AD applications only.
 
@@ -148,7 +148,7 @@ Handle 429 (rate limit) and 503 (service unavailable) errors with automatic retr
 </policies>
 ```
 
-**Source:** [labs/backend-pool-load-balancing/policy.xml](../../../labs/backend-pool-load-balancing/policy.xml)
+**Source:** [labs/backend-pool-load-balancing/policy.xml](../../../../labs/backend-pool-load-balancing/policy.xml)
 
 **Key points:**
 - `count="2"` for 3 backends (retries 2 times + original = 3 attempts)
@@ -186,7 +186,7 @@ Limit token consumption per subscription:
 </policies>
 ```
 
-**Source:** [labs/token-rate-limiting/policy.xml](../../../labs/token-rate-limiting/policy.xml)
+**Source:** [labs/token-rate-limiting/policy.xml](../../../../labs/token-rate-limiting/policy.xml)
 
 **Policy variants:**
 - `llm-token-limit` - Generic LLM provider
@@ -224,7 +224,7 @@ Cache responses based on semantic similarity of prompts:
 </policies>
 ```
 
-**Source:** [labs/semantic-caching/policy.xml](../../../labs/semantic-caching/policy.xml)
+**Source:** [labs/semantic-caching/policy.xml](../../../../labs/semantic-caching/policy.xml)
 
 **Key points:**
 - `score-threshold="0.8"` - Similarity threshold (0.0-1.0)
@@ -269,7 +269,7 @@ Block harmful content before sending to LLM:
 </policies>
 ```
 
-**Source:** [labs/content-safety/policy.xml](../../../labs/content-safety/policy.xml)
+**Source:** [labs/content-safety/policy.xml](../../../../labs/content-safety/policy.xml)
 
 **Key points:**
 - `shield-prompt="true"` - Enable prompt shielding
@@ -309,7 +309,7 @@ Track LLM token consumption in Application Insights:
 </policies>
 ```
 
-**Source:** [labs/token-metrics-emitting/policy.xml](../../../labs/token-metrics-emitting/policy.xml)
+**Source:** [labs/token-metrics-emitting/policy.xml](../../../../labs/token-metrics-emitting/policy.xml)
 
 **Common dimensions:**
 - `Subscription ID` - Track usage per subscription
@@ -395,7 +395,7 @@ Route requests to different backends based on model name in URL or body:
 </policies>
 ```
 
-**Source:** [labs/model-routing/policy.xml](../../../labs/model-routing/policy.xml)
+**Source:** [labs/model-routing/policy.xml](../../../../labs/model-routing/policy.xml)
 
 **Use cases:**
 - Route to different Azure regions based on model
@@ -463,7 +463,7 @@ Combines multiple patterns for production deployments:
 </policies>
 ```
 
-**Source:** [labs/zero-to-production/policy-4.xml](../../../labs/zero-to-production/policy-4.xml)
+**Source:** [labs/zero-to-production/policy-4.xml](../../../../labs/zero-to-production/policy-4.xml)
 
 **Features combined:**
 1. **Load balancing** - Backend pool with retry

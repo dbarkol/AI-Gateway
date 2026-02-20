@@ -2,7 +2,7 @@
 
 ## [Response streaming lab](response-streaming.ipynb)
 
-[![flow](../../images/response-streaming.gif)](response-streaming.ipynb)
+[![flow](../../../images/response-streaming.gif)](response-streaming.ipynb)
 
 Playground to try response streaming with APIM and Azure OpenAI endpoints to explore the advantages and shortcomings associated with streaming. To get responses sooner, you can 'stream' the completion as it's being generated. This allows you to start printing or processing the beginning of the completion before the full completion is finished.
 

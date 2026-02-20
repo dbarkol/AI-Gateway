@@ -45,7 +45,7 @@ At a high level you can break down working with functions into three steps:
 
 ### 🚀 Get started
 
-Proceed by opening the [Jupyter notebook](built-in-logging.ipynb), and follow the steps provided.
+Proceed by opening the [Jupyter notebook](function-calling.ipynb), and follow the steps provided.
 
 ### 🗑️ Clean up resources
 

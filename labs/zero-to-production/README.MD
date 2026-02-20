@@ -19,7 +19,7 @@ authors:
 
 Playground to create a combination of several policies in an iterative approach. We start with load balancing, then progressively add token emitting, rate limiting, and, eventually, semantic caching. Each of these sets of policies is derived from other labs in this repo.
 
-[View policy configuration](policy.xml)
+[View policy configuration](policy-4.xml)
 
 ### Prerequisites
 

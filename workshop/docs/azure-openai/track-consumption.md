@@ -53,7 +53,7 @@ Make sure you have completed the lesson on [setting up cloud resources](./create
 
 1. On the **Policies tab**, optionally enable policies to monitor and manage Azure OpenAI API token consumption. You can also set or edit policies later.
 
-    ![Select track during import](/img/monitor-import-select-monitor.png)
+    ![Select track during import](../../static/img/monitor-import-select-monitor.png)
 
     If selected, enter settings or accept defaults that define the following policies (see linked articles for prerequisites and configuration details):
 
@@ -62,7 +62,7 @@ Make sure you have completed the lesson on [setting up cloud resources](./create
 
 1. Add dimensions you want to track, you can also do this at a later stage. Here's how you can add dimensions:
 
-    ![Add dimensions](/img/monitor-import-setup-dimensions.png)
+    ![Add dimensions](../../static/img/monitor-import-setup-dimensions.png)
 
     
 1. Select **Review + Create**.
@@ -77,7 +77,7 @@ Now that we have imported our Azure Open AI instance, let's inspect what we got 
 
 1. Select your API **aoai** and select the **Settings** tab
 
-    ![Select settings on the API](/img/monitor-enable.png)
+    ![Select settings on the API](../../static/img/monitor-enable.png)
 
 1. Check *enable* checkbox and leave the rest as is.
 1. Select **Save**
@@ -88,7 +88,7 @@ Now that we have imported our Azure Open AI instance, let's inspect what we got 
 
     You should see a policy and all the dimensions you've select during import. You can add further dimensions if you wish. 
 
-    ![Inspect policy](/img/monitor-inspect-policy.png)
+    ![Inspect policy](../../static/img/monitor-inspect-policy.png)
 
 1. Let's test the API by navigating to **Test** tab. 
 1. Fill in the following values:
@@ -101,7 +101,7 @@ Now that we have imported our Azure Open AI instance, let's inspect what we got 
 
 1. Select **Send**, you should see a request response coming back.
 
-    ![Send request](/img/monitor-test-import.png)
+    ![Send request](../../static/img/monitor-test-import.png)
 
 ## Exercise: Test monitoring
 
@@ -124,19 +124,19 @@ To test the monitoring, we need to run a few requests, then navigate to it and i
    That takes you to your dashboard. 
 1. In Metrics namespace droplist, select **api management**, like so:
 
-   ![api management entry in namespace](/img/monitor-metrics.png)
+   ![api management entry in namespace](../../static/img/monitor-metrics.png)
 
    Once you select that, Metrics droplist should filter down to some very interesting metrics like Completion Tokens, Prompt Tokens and Total Tokens.
 
 1. Add all three metrics and you should see something similar to below image:
 
-   ![metrics dashboard](/img/monitor-dashboard.png)
+   ![metrics dashboard](../../static/img/monitor-dashboard.png)
 
    Now you can see your prompts token (23), the number of tokens used to present a response (77.17) and the total number of tokens (100.17)
 
    If you want, try to test some more requests with different prompts and see how they show up on the dashboard. Below here's what it can look like with a new request, note how both the second smaller request (to the left in the screen) is present and the new request (to the right in the screen)
 
-   ![metrics dashboard](/img/monitor-dashboard-2.png)
+   ![metrics dashboard](../../static/img/monitor-dashboard-2.png)
 
 ## Additional Resources
 
