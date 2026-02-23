@@ -43,7 +43,7 @@ This pattern will allow you to:
 - Automatically scale to consumption-based instances when demand exceeds PTU capacity
 - Maintain service availability even if one or more regions experience issues
 
-![backend pool load balancing](/img/backend-pool-load-balancing.gif)
+![backend pool load balancing](../../static/img/backend-pool-load-balancing.gif)
 
 ## Exercise - Set up load balancing
 
@@ -61,7 +61,7 @@ To make load balancing happen, we need at least two instances of Azure Open AI, 
 
 2. Navigate to your API Management service and expand the **APIs** section
 3. You will now add the Azure OpenAI services as backends to your API Management service. Click on **Backends** and then **+ Create new backend**
-![backend pool load balancing create backend](/img/wrsh-loadbalancing-create-backend.png)
+![backend pool load balancing create backend](../../static/img/wrsh-loadbalancing-create-backend.png)
     - Enter a _Name_ (e.g., `openai-eastus`)
     - Select **Custom URL** as the _Backend hosting type_
     - Paste in the **Endpoint URL** you copied earlier
@@ -76,11 +76,11 @@ To make load balancing happen, we need at least two instances of Azure Open AI, 
         - Enter a _Name_ (e.g., `openAIBreakerRule`)
         - Leave _Failure count_ as **1**
         - Set _Failure interval_ to **5 minutes**
-        ![backend pool load balancing circuit breaker rule name](/img/wrsh-loadbalancing-circuit-rule-name.png)
+        ![backend pool load balancing circuit breaker rule name](../../static/img/wrsh-loadbalancing-circuit-rule-name.png)
         - Specify _Custom range_ as **429**
         - Set _Trip duration_ to **1 minute**
         - Check **True (Accept)** for the _Check 'Retry-After' header in HTTP reponse_
-        ![backend pool load balancing circuit breaker range](/img/wrsh-loadbalancing-circuit-range.png)
+        ![backend pool load balancing circuit breaker range](../../static/img/wrsh-loadbalancing-circuit-range.png)
 
 - Click on **Create** to add the Azure OpenAI service as a backend
 - Repeat the above steps for the other two Azure OpenAI services, ensuring you set the same circuit breaker rule for each backend
@@ -92,10 +92,10 @@ To make load balancing happen, we need at least two instances of Azure Open AI, 
         - Name: `openai-swedencentral`
         - Circuit breaker rule: `openAIBreakerRule`
 
-    ![backend pool load balancing all backends](/img/wrsh-loadbalancing-all-backends.png)
+    ![backend pool load balancing all backends](../../static/img/wrsh-loadbalancing-all-backends.png)
 
 4. Next, you will need to create a **Load Balanced Pool** for your Azure OpenAI services. Click on **Load balancer** and then **+ Create new pool**
-![backend pool load balancing create load balanced pool](/img/wrsh-loadbalancing-create-pool.png)
+![backend pool load balancing create load balanced pool](../../static/img/wrsh-loadbalancing-create-pool.png)
     - Enter a _Name_ (e.g., `openai-backend-pool`)
     - Check all three backends you created earlier for the _Add backends to pool_ option
     - Leave the _Backend weight and priority_ as **Send requests evenly** to distribute requests evenly across all backends (Round Robin)
@@ -103,12 +103,12 @@ To make load balancing happen, we need at least two instances of Azure Open AI, 
 ### -2- Import Azure Open AI to your Azure API Management instance
 
 1. In your API Management service, click on **APIs**, scroll to **Create from Azure resource** and then select **Azure OpenAI Service**
-![backend pool load balancing import from AOI](/img/wrsh-loadbalancing-import-from-aoi.png)
+![backend pool load balancing import from AOI](../../static/img/wrsh-loadbalancing-import-from-aoi.png)
     - Select an _Azure OpenAI instance_ (e.g., `wrsh-openai-eastus`)
     - Select **2024-02-01** as the _Azure OpenAI API version_
     - Enter a _Display name_ (e.g., `OpenAI`)
     - Check the **Improve SDK compatibility** option, which will postfix the base url with `/openai`
-    ![backend pool load balancing import from AOI config](/img/wrsh-loadbalancing-import-config.png)
+    ![backend pool load balancing import from AOI config](../../static/img/wrsh-loadbalancing-import-config.png)
     - Click on **Review + Create** and then **Create**
 
 2. You now need to configure API Policies for the API you just created. Click on **APIs** and select the API you just created (e.g., `OpenAI`)
@@ -167,7 +167,7 @@ Round-robin load balancing is the default behavior of Azure API Management. API 
         **Template parameters**:
         - **deployment-id**: `gpt-4o-mini`
         - **api-version**: `2024-02-01`
-        ![backend pool load balancing test template parameters](/img/wrsh-loadbalancing-api-template-parameters.png)
+        ![backend pool load balancing test template parameters](../../static/img/wrsh-loadbalancing-api-template-parameters.png)
 
         **Request body**:
         ```json
@@ -180,9 +180,9 @@ Round-robin load balancing is the default behavior of Azure API Management. API 
         ```
 
     4. Click on **Send** to send the request. Run the test multiple times and observe the "x-ms-region" header in the response. You'll notice that the requests are being distributed evenly across all three backends in the pool (East US, West US, and Sweden Central).
-    ![backend pool load balancing round robin test](/img/wrsh-loadbalancing-round-robin.gif)
+    ![backend pool load balancing round robin test](../../static/img/wrsh-loadbalancing-round-robin.gif)
 
-        ![backend pool load balancing round robin result](/img/wrsh-loadbalancing-round-robin-results.png)
+        ![backend pool load balancing round robin result](../../static/img/wrsh-loadbalancing-round-robin-results.png)
 
 ### -2- Test Priority-Based Load Balancing
 
@@ -200,7 +200,7 @@ For example, if you were to set the following priorities:
 
 The expected behavior would be that requests would be sent to the East US backend first. If it is unavailable, requests would then be sent to the West US backend, and finally to the Sweden Central backend.
 
-    ![backend pool load balancing priority based load balancing results](/img/wrsh-loadbalancing-priority-based-results.png)
+    ![backend pool load balancing priority based load balancing results](../../static/img/wrsh-loadbalancing-priority-based-results.png)
 
 ### -3- Test Weighted Load Balancing
 
@@ -212,13 +212,13 @@ To test this, you will need to update the backend pool configuration to set prio
         - **East US**: Priority 1
         - **West US**: Priority 2, Weight 50
         - **Sweden Central**: Priority 2, Weight 50
-    ![backend pool load balancing weighted load balancing](/img/wrsh-loadbalancing-customize-weights.png)
+    ![backend pool load balancing weighted load balancing](../../static/img/wrsh-loadbalancing-customize-weights.png)
     3. Click on **Save** to save the changes
     4. Now return to the **APIs** section to test the API again. You can use the same test as before, but this time you should see that the requests are being distributed based on the weights you set. The East US backend should receive more traffic than the West US and Sweden Central backends.
 
-        ![backend pool load balancing weighted load balancing test](/img/wrsh-loadbalancing-weighted.gif)
+        ![backend pool load balancing weighted load balancing test](../../static/img/wrsh-loadbalancing-weighted.gif)
 
-        ![backend pool load balancing weighted load balancing results](/img/wrsh-loadbalancing-weighed-results.png)
+        ![backend pool load balancing weighted load balancing results](../../static/img/wrsh-loadbalancing-weighed-results.png)
 
 ## Conclusion
 You learnt how to set up automated load balancing and failover for your Azure OpenAI services using Azure API Management. This setup allows you to ensure high availability, optimize resource usage, and provide a seamless experience for your users even in the face of backend failures.

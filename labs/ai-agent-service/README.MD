@@ -16,7 +16,7 @@ authors:
 
 # APIM ❤️ AI Agents
 
-## [Azure AI Agent Service lab](ai-agent-service.ipynb)
+## [Azure AI Agent Service lab](ai-agent-service-v2.ipynb)
 
 ![flow](../../images/ai-agent-service.gif)
 
@@ -32,7 +32,7 @@ Use this playground to explore the [Azure AI Agent Service](https://learn.micros
 
 ### 🚀 Get started
 
-Proceed by opening the [Jupyter notebook](ai-agent-service.ipynb), and follow the steps provided.
+Proceed by opening the [Jupyter notebook](ai-agent-service-v2.ipynb), and follow the steps provided.
 
 ### 🗑️ Clean up resources
 
