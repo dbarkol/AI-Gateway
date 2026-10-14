@@ -385,9 +385,9 @@
     "authors": [
       "vieiraae"
     ],
-    "githubPath": "https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/finops-framework",
+    "githubPath": "https://github.com/dbarkol/AI-Gateway/tree/main/labs/finops-framework",
     "tags": [],
-    "lastCommitDate": "2026-06-23T13:28:02.177Z"
+    "lastCommitDate": "2026-10-14T20:19:51.029Z"
   },
   {
     "id": "foundry-e2e-private",
@@ -670,6 +670,34 @@
     "githubPath": "https://github.com/Azure-Samples/AI-Gateway/tree/main/labs/mcp-from-api",
     "tags": [],
     "lastCommitDate": "2026-06-23T13:28:02.184Z"
+  },
+  {
+    "id": "mcp-from-graphql",
+    "name": "MCP from GraphQL",
+    "architectureDiagram": "images/mcp-from-graphql.png",
+    "categories": [
+      "AI Agents"
+    ],
+    "services": [
+      "Azure API Management",
+      "Azure API Center",
+      "Microsoft Foundry",
+      "Azure Container Apps",
+      "Azure Container Registry"
+    ],
+    "shortDescription": "Import a GraphQL API into API Management, translate its schema into MCP tools, discover both surfaces through an API Center integration, and consume the tools with Microsoft Agent Framework.",
+    "detailedDescription": "The Countries GraphQL API is imported as a native pass-through GraphQL API in Azure API Management. A pinned graphql-mcp translator runs on Azure Container Apps, introspects the managed GraphQL endpoint, and generates read-only MCP tools. API Management exposes the translator as a governed Streamable HTTP MCP server. An API Center integration uses managed identity and API Management Service Reader access to continuously discover the GraphQL and MCP APIs and import their specifications. A Microsoft Agent Framework agent uses the MCP tools while its model traffic also passes through API Management.",
+    "authors": [
+      "nourshaker-msft"
+    ],
+    "tags": [
+      "GraphQL",
+      "MCP",
+      "Agent Framework",
+      "API Center"
+    ],
+    "githubPath": "https://github.com/dbarkol/AI-Gateway/tree/main/labs/mcp-from-graphql",
+    "lastCommitDate": "2026-10-14T20:19:51.030Z"
   },
   {
     "id": "mcp-prm-oauth",
